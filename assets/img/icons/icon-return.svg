@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="95" viewBox="0 0 68 95">
+  <g id="Grupo_437" data-name="Grupo 437" transform="translate(3.943 3.468)">
+    <g id="Grupo_436" data-name="Grupo 436" transform="translate(0 0.203)">
+      <g id="Grupo_435" data-name="Grupo 435" transform="translate(0 0)">
+        <g id="Elipse_606" data-name="Elipse 606" transform="translate(0.057 0.328)" fill="#c60e18" stroke="#fff" stroke-width="4">
+          <circle cx="30" cy="30" r="30" stroke="none"/>
+          <circle cx="30" cy="30" r="32" fill="none"/>
+        </g>
+        <ellipse id="Elipse_607" data-name="Elipse 607" cx="29" cy="29.5" rx="29" ry="29.5" transform="translate(1.057 0.328)" fill="#f32732"/>
+      </g>
+      <path id="Trazado_26807" data-name="Trazado 26807" d="M-5017.758-842.44h0v-2.279a2.126,2.126,0,0,0-3.189-1.8l-6.812,3.851a2.06,2.06,0,0,0,0,3.605l6.813,3.851a2.126,2.126,0,0,0,3.189-1.8V-839.3h0a14.4,14.4,0,0,1,14.536,14.229,14.4,14.4,0,0,1-14.536,14.23,14.4,14.4,0,0,1-14.535-14.23,1.589,1.589,0,0,0-1.605-1.572,1.59,1.59,0,0,0-1.605,1.572,17.582,17.582,0,0,0,17.746,17.373,17.583,17.583,0,0,0,17.747-17.373A17.583,17.583,0,0,0-5017.758-842.44Z" transform="translate(5048.249 855.941)" fill="#fff"/>
+    </g>
+    <text id="VOLVER" transform="translate(29.057 87.532)" fill="#fff" font-size="15" font-family="SegoeUIBlack, Segoe UI"><tspan x="-29.583" y="0">VOLVER</tspan></text>
+  </g>
+</svg>

@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
-const minify = require('gulp-minify');
 const browserSync = require('browser-sync').create();
 
 function browser_sync(done) {
@@ -10,7 +9,7 @@ function browser_sync(done) {
         proxy: "http://localhost/portafolio/preguntados/"
     });
     gulp.watch("./src/sass/**/*.scss", css);
-    gulp.watch("./src/js/**/*.js").on('change', browserSync.reload);
+    gulp.watch("./assets/js/**/*.js").on('change', browserSync.reload);
     gulp.watch("./**/*.html").on('change', browserSync.reload);
 
     done();
@@ -36,15 +35,6 @@ function css(done) {
     done();
 };
 
-function js(done) {
-    gulp.src('./src/js/**/*.js')
-        .pipe(minify())
-        .pipe(gulp.dest('assets/js/'))
-
-    done();
-};
-
 gulp.task("css", css);
-gulp.task("js", js);
 gulp.task("browser_sync", browser_sync);
-gulp.task("default",  gulp.parallel(css, js, browser_sync));
+gulp.task("default",  gulp.parallel(css, browser_sync));
