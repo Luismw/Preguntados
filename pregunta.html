@@ -5,8 +5,9 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="Description">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="assets/css/style.css?v=1.1">
 		<link rel="shortcut icon" href="assets/img/logo2.svg">
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body class="question">
 		<div class="wrap-content">
@@ -40,7 +41,7 @@
 								<li class="main-menu__item">
 									<a href="premios.html">Premios</a>
 								</li>
-								<li class="main-menu__item btn-modal-donation">
+								<li class="main-menu__item" data-toggle="modal" data-target="#modal-form-donation">
 									<span>DONÁ <br> AHORA</span>
 								</li>
 							</ul>
@@ -82,8 +83,140 @@
 			</footer>
 		</div>
 
+		<!-- Modals -->
+
+		<!-- Formulario de donación -->
+		<div class="modal fade" id="modal-form-donation" data-backdrop="static" data-keyboard="false" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-dismiss="modal">X</button>
+					</div>
+					<div class="modal-body">
+						<form class="form-donation">
+							<div class="step step-1 active">
+								<h2 class="title">¡Doná en solo tres pasos! ​<br> 1. Seleccióná el monto de tu donación: </h2>
+								<div class="inputs">
+									<div class="input-wrap">
+										<input type="radio" name="monto" id="option1">
+										<label for="option1">$700 <span>POR MES.</span></label>
+									</div>
+									<div class="input-wrap">
+										<input type="radio" name="monto" id="option2" checked>
+										<label for="option2">$900 <span>POR MES.</span></label>
+									</div>
+									<div class="input-wrap">
+										<input type="radio" name="monto" id="option3">
+										<label for="option3">$1.500 <span>POR MES.</span></label>
+									</div>
+								</div>
+								<p class="text-extra">Con $900 mensuales ($30 x día) colaborás para incorporar alimentos nutritivos en la vianda de 2 chicas o chicos durante un mes.</p>
+							</div>
+							<div class="step step-2 d-none">
+								<h2 class="title">Estás a dos pasos de ayudar a las chicas y chicos.​ <br> 2. Elegí tu método de pago: </h2>
+								<div class="inputs">
+									<div class="input-wrap select">
+										<label>Medio de pago</label>
+										<select class="selectpicker">
+											<option selected hidden></option>
+											<option value="">Tarjeta de crédito</option>
+											<option value="">Transferencia bancaria</option>
+										</select>
+									</div>
+									<div class="input-wrap">
+										<label>Número de tarjeta / CBU</label>
+										<input type="text">
+										<span class="input-text">*Por favor, no ingreses un CVU virtual ya que no podremos procesar tu donación.</span>
+									</div>
+									<div class="input-wrap">
+										<label>DNI del titular de la tarjeta</label>
+										<input type="text">
+									</div>
+								</div>
+							</div>
+							<div class="step step-3 d-none">
+								<h2 class="title">¡Estás en el último paso! <br>
+									3. Te pedimos unos datos más para poder participar
+									del sorteo por el Chevrolet Cruze 0 KM.​ 
+								</h2>
+								<div class="inputs">
+									<div class="input-wrap">
+										<label>Dirección</label>
+										<input type="text">
+									</div>
+									<div class="input-wrap">
+										<label>Ciudad</label>
+										<input type="text">
+									</div>
+									<div class="input-wrap">
+										<label>Código postal</label>
+										<input type="text">
+									</div>
+									<div class="input-wrap">
+										<label>Teléfono</label>
+										<input type="text" placeholder="cod.">
+										<input type="text">
+									</div>
+									<div class="input-wrap">
+										<label>Fecha de nacimiento</label>
+										<input type="text">
+									</div>
+									<div class="input-wrap">
+										<label>Género</label>
+										<input type="text">
+									</div>
+									<div class="input-wrap">
+										<label>Cantidad de hijos</label>
+										<input type="text">
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<button class="first-button" type="button">QUIERO DONAR</button>
+								<button class="prev-button" type="button"></button>
+								<button class="next-button" type="button">SIGUIENTE</button>
+								<button class="submit-button d-none" type="button" data-toggle="modal" data-target="#modal-message-donation">DONAR</button>
+							</div>
+						</form> 
+					</div>
+					<div class="modal-footer">
+						<img src="assets/img/icons/icon-locked.svg" alt="bloqueado">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mostrar mensaje despues de enviar formulario de donación -->
+		<div class="modal fade" id="modal-message-donation" data-backdrop="static" data-keyboard="false" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-dismiss="modal">X</button>
+					</div>
+					<div class="modal-body">
+						<h2 class="title">¡@Name, muchas gracias por tu donación!</h2>
+						<div class="block1">
+							<p>Con tu aporte mensual ayudarás a que más chicas y chicos de barrios populares del país, accedan a una nutrición adecuada para su crecimiento.</p>
+							<img src="assets/img/chicos.png" alt="chicos">
+						</div>
+						<p class="text-extra">Además ya estás participando en el sorteo por un Chevrolet Cruze 0KM. ¡No olvides mirar el programa el día 11 de septiembre para festejar juntos los 30 años de Un Sol para los Chicos!</p>
+						<a href="index.html" class="btn">Volver al juego</a>
+					</div>
+					<div class="modal-footer">
+						<p>CENTRO DE ATENCIÓN A DONANTES: 0810-333-4455 buenosaires.donantes@unicef.org +INFO SOBRE <a href="#" target="_blank">UNICEF</a></p>
+						<div class="social">
+							<a href="#" target="_blank"><i class="facebook"></i></a>
+							<a href="#" target="_blank"><i class="instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- JS -->
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-		<script src="assets/js/custom/main-min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/bootstrap-select.min.js"></script>
+		<script src="assets/js/custom/main.js"></script>
 	</body>
 </html>
