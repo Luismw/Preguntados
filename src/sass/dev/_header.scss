@@ -41,6 +41,9 @@
                 @include to(1200px){
                     margin: 0 15px;
                 }
+                @include to(1030px){
+                    margin: 0 13px;
+                }
                 @include to(l){
                     width: 45px;
                     height: 45px;

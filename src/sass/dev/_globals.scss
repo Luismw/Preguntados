@@ -31,9 +31,20 @@
     .modal-dialog{
         max-width: 900px;
 
+        @include to(l){
+            padding: 0 15px;
+        }
+        @include to(md){
+            margin: 0;
+        }
+
         .modal-content{
             border-radius: 20px;
             padding: 5px;
+
+            @include to(md){
+                padding: 0;
+            }
 
             .modal-header{
                 border: none;
@@ -64,6 +75,10 @@
             .modal-body{
                 padding-top: 0;
                 padding-bottom: 0;
+
+                @include to(m){
+                    padding-bottom: 20px;
+                }
                 
                 .form-donation{
                     .step{
@@ -72,6 +87,19 @@
                             font-weight: 900;
                             text-align: center;
                             font-size: 35px;
+
+                            @include to(900px){
+                                font-size: 30px;
+                            }
+                            @include to(600px){
+                                font-size: 26px;
+                            }
+                            @include to(400px){
+                                font-size: 24px;
+                            }
+                            @include to(370px){
+                                font-size: 22px;
+                            }
                         }
                         .inputs{
                             display: flex;
@@ -81,8 +109,21 @@
                         }
                         &.step-1{
                             .inputs{
+                                @include to(m){
+                                    flex-direction: column;
+                                    padding: 15px 0;
+                                }
                                 .input-wrap{
                                     padding: 0 15px;
+
+                                    @include to(md){
+                                        padding: 0 5px;
+                                    }
+                                    @include to(m){
+                                        padding: 5px 0;
+                                        width: 100%;
+                                        max-width: 200px;
+                                    }
                                     
                                     input{
                                         display: none;
@@ -108,6 +149,17 @@
                                         background-color: $blanco;
                                         box-shadow: 0 3px 0 rgba($negro,.15);
 
+                                        @include to(900px){
+                                            font-size: 50px;
+                                        }
+                                        @include to(700px){
+                                            font-size: 40px;
+                                        }
+                                        @include to(600px){
+                                            padding: 10px 20px 8px 20px;
+                                            font-size: 30px;
+                                        }
+
                                         &:hover{
                                             background-color: darken($blanco, 5%);
                                         }
@@ -119,6 +171,14 @@
                                             font-family: $font-text;
                                             font-weight: 700;
                                             margin-top: -5px;
+
+                                            @include to(600px){
+                                                margin-top: -2px;
+                                                font-size: 10px;
+                                            }
+                                            @include to(m){
+                                                text-align: center;
+                                            }
                                         }
                                     }
                                 }
@@ -130,9 +190,37 @@
                                 max-width: 680px;
                                 line-height: 1.1;
                                 margin: 0 auto;
+
+                                @include to(md){
+                                    font-size: 20px;
+                                }
+                                @include to(700px){
+                                    font-size: 18px;
+                                }
+                                @include to(600px){
+                                    font-size: 16px;
+                                }
                             }
                         }
                         &.step-2{
+                            .title{
+                                @include to(md){
+                                    font-size: 26px;
+                                }
+                                @include to(650px){
+                                    font-size: 24px;
+                                }
+                                @include to(600px){
+                                    font-size: 22px;
+                                }
+                                @include to(550px){
+                                    max-width: 300px;
+                                    margin: 0 auto;
+                                }
+                                @include to(345px){
+                                    font-size: 20px;
+                                }
+                            }
                             .inputs{
                                 flex-wrap: wrap;
                                 align-items: flex-start;
@@ -146,9 +234,24 @@
 
                                     &:nth-child(1){
                                         width: 35%;
+
+                                        @include to(md){
+                                            width: 40%;
+                                        }
+                                        @include to(m){
+                                            width: 100%;
+                                        }
                                     }
                                     &:nth-child(2){
                                         width: 65%;
+
+                                        @include to(md){
+                                            width: 60%;
+                                        }
+                                        @include to(m){
+                                            width: 100%;
+                                            padding-top: 10px;
+                                        }
                                     }
                                     &:nth-child(3){
                                         width: 100%;
@@ -160,6 +263,9 @@
 
                                         @include to(m){
                                             font-size: 16px;
+                                        }
+                                        @include to(335px){
+                                            font-size: 15px;
                                         }
                                     }
                                     input,
@@ -177,6 +283,10 @@
                                         }
                                     }
                                     .bootstrap-select{
+                                        @include to(md){
+                                            width: 100%;
+                                        }
+
                                         .dropdown-toggle{
                                             border-radius: 12px;
                                             border: 2px solid #6CCFB9;
@@ -220,6 +330,11 @@
                                             .dropdown-item:active {
                                                 background-color: $blue;
                                             }
+                                            .dropdown-item{
+                                                @include to(m){
+                                                    padding: 8px 15px;
+                                                }
+                                            }
                                         }
 
                                     }
@@ -234,6 +349,20 @@
                             }
                         }
                         &.step-3{
+                            .title{
+                                @include to(md){
+                                    font-size: 26px;
+                                }
+                                @include to(650px){
+                                    font-size: 24px;
+                                }
+                                @include to(m){
+                                    font-size: 22px;
+                                }
+                                @include to(390px){
+                                    font-size: 20px;
+                                }
+                            }
                             .inputs{
                                 flex-wrap: wrap;
                                 align-items: flex-start;
@@ -245,19 +374,41 @@
                                 .input-wrap{
                                     padding: 0 5px;
 
+                                    @include to(550px){
+                                        padding-bottom: 10px !important;
+                                    }
+
                                     &:nth-child(1){
                                         width: 40%;
                                         padding-bottom: 15px;
+
+                                        @include to(md){
+                                            width: 50%;
+                                        }
+                                        @include to(550px){
+                                            width: 100%;
+                                        }
                                     }
                                     &:nth-child(2),
                                     &:nth-child(3){
                                         width: 30%;
                                         padding-bottom: 15px;
+
+                                        @include to(md){
+                                            width: 50%;
+                                        }
                                     }
                                     &:nth-child(4){
                                         width: 30%;
                                         display: flex;
                                         flex-wrap: wrap;
+
+                                        @include to(md){
+                                            width: 50%;
+                                        }
+                                        @include to(m){
+                                            width: 100%;
+                                        }
 
                                         label{
                                             width: 100%;
@@ -272,10 +423,34 @@
                                     }
                                     &:nth-child(5){
                                         width: 30%;
+
+                                        @include to(md){
+                                            width: 33.33%;
+                                        }
+                                        @include to(600px){
+                                            width: 40%;
+                                        }
+                                        @include to(550px){
+                                            width: 50%;
+                                        }
+                                        @include to(m){
+                                            width: 100%;
+                                        }
                                     }
                                     &:nth-child(6),
                                     &:nth-child(7){
                                         width: 20%;
+
+                                        @include to(md){
+                                            width: 33.33%;
+                                        }
+                                        @include to(600px){
+                                            width: 30%;
+                                        }
+                                        @include to(550px){
+                                            width: 50%;
+                                            padding-bottom: 0 !important;
+                                        }
                                     }
                                     label{
                                         font-size: 17px;
@@ -283,6 +458,9 @@
 
                                         @include to(m){
                                             font-size: 16px;
+                                        }
+                                        @include to(335px){
+                                            font-size: 15px;
                                         }
                                     }
                                     input{
@@ -308,6 +486,10 @@
                         align-items: center;
                         margin-top: 30px;
 
+                        @include to(m){
+                            margin-top: 20px;
+                        }
+
                         button{
                             border: none;
                             outline: none;
@@ -322,12 +504,14 @@
                                 top: 5px;
                                 position: relative;
 
-                                &:hover{
-                                    &:before{
-                                        background-size: 45px;
-                                        width: 45px;
-                                        height: 45px;
-                                        top: 2.5px;
+                                @include from(md){
+                                    &:hover{
+                                        &:before{
+                                            background-size: 45px;
+                                            width: 45px;
+                                            height: 45px;
+                                            top: 2.5px;
+                                        }
                                     }
                                 }
 
@@ -343,6 +527,18 @@
                                     width: 50px;
                                     height: 50px;
                                     transition: all .3s;
+
+                                    @include to(650px){
+                                        background-size: 45px;
+                                        width: 45px;
+                                        height: 45px;
+                                    }
+                                    @include to(m){
+                                        background-size: 40px;
+                                        width: 40px;
+                                        height: 40px;
+                                        top: 3px;
+                                    }
                                 }
                             }
                             &.first-button,
@@ -364,6 +560,13 @@
                                     background-color: darken($green, 10%);
                                     box-shadow: 0 5px 0 darken($green, 10%);
                                 }
+
+                                @include to(650px){
+                                    font-size: 25px;
+                                }
+                                @include to(m){
+                                    font-size: 22px;
+                                }
                             }
                         }
                     }
@@ -373,6 +576,10 @@
                 border: none;
                 border-radius: 0;
                 padding-top: 0;
+
+                @include to(m){
+                    display: none;
+                }
 
                 img{
                     display: table;

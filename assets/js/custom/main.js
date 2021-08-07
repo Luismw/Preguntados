@@ -20,7 +20,7 @@ $(function(){
         $('.main-header .item').toggleClass('active');
         $(this).next('.main-menu').slideToggle(300);
     });
-})
+});
 
 
 /* OCULTAR MODAL ACTUAL AL MOSTRAR OTRA*/
@@ -37,10 +37,6 @@ $(document).on('shown.bs.modal', function (event) {
         $('body').addClass('modal-open');
     };
 });
-
-
-/* CAMBIAR ESTILO A LOS SELECTS */
-$('select').selectpicker();
 
 
 /* FORM STEP - DONACIÓN */
