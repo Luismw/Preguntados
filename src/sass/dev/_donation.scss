@@ -1,0 +1,243 @@
+.donation{
+    .wrap-content{
+        background: linear-gradient(#121124, #2D2E75, #6F65A9);
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .main{
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            @include to(1300px){
+                max-width: 900px;
+            }
+            .title{
+                text-align: center;
+                color: $blanco;
+                font-size: 40px;
+                margin-top: 50px;
+                font-weight: 900;
+                font-family: $font-title;
+                line-height: 1.1;
+
+                @include to(l){
+                    font-size: 35px;
+                }
+                @include to(md){
+                    font-size: 30px;
+                }
+                @include to(m){
+                    font-size: 25px;
+                    margin-top: 40px;
+                }
+            }
+            .source{
+                text-align: right;
+                color: #ddd;
+                font-size: 15px;
+                padding: 10px 0 20px 0;
+
+                @include to(md){
+                    text-align: center;
+                }
+            }
+            .subtitle{
+                font-size: 35px;
+                text-align: center;
+                color: $yellow;
+                font-family: $font-title;
+                font-weight: 900;
+
+                @include to(l){
+                    font-size: 30px;
+                }
+                @include to(md){
+                    font-size: 25px;
+                }
+                @include to(m){
+                    font-size: 20px;
+                }
+            }
+            .block1{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 520px;
+                margin: 20px auto 0 auto;
+
+                .image{
+                    width: 50%;
+
+                    @include to(md){
+                        margin-right: 10px;
+                    }
+                    @include to(m){
+                        display: none;
+                    }
+
+                    img{
+                        width: 100%;
+                    }
+                }
+                .copy{
+                    width: 50%;
+                    text-align: right;
+
+                    @include to(md){
+                        text-align: center;
+                    }
+                    @include to(m){
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .btn-modal-donation{
+                        background-color: $green;
+                        font-family: $font-title;
+                        font-size: 40px;
+                        color: $blanco;
+                        border-radius: 12px;
+                        cursor: pointer;
+                        font-weight: 900;
+                        padding: 10px 35px 5px 35px;
+                        box-shadow: 0 5px 0 darken($green, 10%);
+                        transition: all .3s;
+
+                        &:hover{
+                            background-color: darken($green, 10%);
+                        }
+                        @include to(md){
+                            font-size: 30px;
+                        }
+                        @include to(m){
+                            font-size: 25px;
+                        }
+                    }
+                    img{
+                        width: 210px;
+                        display: inline-block;
+                        margin-top: 20px;
+
+                        @include to(m){
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+            .block2{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 950px;
+                margin: 10px auto 0 auto;
+
+                @include to(md){
+                    flex-direction: column;
+                    margin: 30px auto 80px auto;
+                }
+
+                .copy{
+                    color: $blanco;
+                    text-align: center;
+                    max-width: 600px;
+                    margin: 0 auto;
+
+                    h4{
+                        font-family: $font-title;
+                        font-weight: 900;
+                        font-size: 30px;
+                        line-height: 1.1;
+
+                        @include to(l){
+                            font-size: 25px;
+                        }
+                        @include to(md){
+                            font-size: 22px;
+                        }
+                        @include to(m){
+                            font-size: 20px;
+                        }
+                    }
+                    p{
+                        font-size: 20px;
+                        line-height: 1.2;
+                        padding-top: 15px;
+                        font-weight: 700;
+
+                        @include to(l){
+                            font-size: 18px;
+                        }
+                        @include to(m){
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .image{
+                    width: 100%;
+                    max-width: 320px;
+                    margin-left: -100px;
+
+                    @include to(1300px){
+                        margin-left: 0;
+                    }
+                    @include to(md){
+                        margin-top: 20px;
+                    }
+                    @include to(m){
+                        max-width: 250px;
+                    }
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .btn-return{
+                display: table;
+                margin: 45px auto 20px auto;
+                color: $blanco;
+                font-family: $font-title;
+                font-weight: 900;
+                font-size: 14px;
+                position: relative;
+                
+                &:hover{
+                    &:before{
+                        background-size: 45px;
+                        width: 45px;
+                        height: 45px;
+                        top: -50px;
+                    }
+                }
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: -55px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-image: url("../img/icons/icon-return.svg");
+                    background-repeat: no-repeat;
+                    background-size: 50px;
+                    width: 50px;
+                    height: 50px;
+                    transition: all .3s;
+                }
+            }
+            .text-extra{
+                color: $blanco;
+                text-align: center;
+                font-size: 11px;
+                font-weight: 500;
+                max-width: 460px;
+                margin: 0 auto 30px auto;
+            }
+        }
+    }
+}

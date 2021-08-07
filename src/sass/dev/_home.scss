@@ -1,0 +1,292 @@
+.home{
+    .wrap-content{
+        background-image: url('../img/bg-home.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .main{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            .title{
+                display: table;
+                margin: 30px auto 45px auto;
+                width: 100%;
+                max-width: 600px;
+            }
+            .login{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 550px;
+                margin: 0 auto;
+                position: relative;
+                border-radius: 0 0 15px 15px;
+                z-index: 10;
+
+                @include to(m){
+                    flex-direction: column;
+                    border-radius: 0;
+
+                    &:before{
+                        display: none;
+                    }
+                }
+                @include to(380px){
+                    margin-top: -10px;
+                }
+
+                &:before{
+                    content: "";
+                    left: 5px;
+                    bottom: 0;
+                    height: 5px;
+                    width: calc(100% - 10px);
+                    position: absolute;
+                    background-color: rgba($negro,.1);
+                    border-radius: 0 0 15px 15px;
+                }
+
+                input{
+                    width: 100%;
+                    font-family: $font-text;
+                    padding: 8px 20px 10px 20px;
+                    font-size: 30px;
+                    border-radius: 15px 0 0 15px;
+                    border: none;
+                    font-weight: 500;
+                    background-color: $blanco;
+
+                    @include to(md){
+                        font-size: 24px;
+                    }
+                    @include to(m){
+                        font-size: 20px;
+                        border-radius: 12px;
+                        text-align: center;
+                    }
+
+                    &::placeholder{
+                        color: #DEDEDE;
+                    }
+                }
+                button{
+                    border: none;
+                    padding: 11px 30px;
+                    font-family: $font-title;
+                    border-radius: 0 15px 15px 0;
+                    font-size: 28px;
+                    font-weight: 900;
+                    text-shadow: 2px 2px 0 rgba($negro,.2);
+                    color: $blanco;
+                    transition: all .3s;
+                    background-color: $green;
+                    cursor: pointer;
+
+                    @include to(md){
+                        font-size: 24px;
+                    }
+                    @include to(m){
+                        font-size: 20px;
+                        border-radius: 12px;
+                        margin-top: 10px;
+                        width: 200px;
+                        box-shadow: 0 4px 0 darken($green, 10%);
+                        padding: 10px 30px 6px 30px;
+                    }
+
+                    &:hover{
+                        background-color: darken($green, 10%);
+                    }
+                }
+            }
+            .btn-register{
+                padding: 6px 45px 2px 45px;
+                display: table;
+                margin: 30px auto 0 auto;
+                font-family: $font-title;
+                border-radius: 12px;
+                font-size: 20px;
+                font-weight: 900;
+                text-shadow: 2px 2px 0 rgba($negro,.2);
+                color: $blanco;
+                transition: all .3s;
+                background-color: $red;
+                box-shadow: 0 4px 0 #B7222A;
+                position: relative;
+                z-index: 10;
+
+                @include to(m){
+                    width: 200px;
+                    padding: 8px 30px 4px 30px;
+                    text-align: center;
+                    margin-top: 15px;
+                }
+
+                &:hover{
+                    background-color: darken($red, 10%)
+                }
+            }
+            .poster{
+                position: relative;
+                margin-top: -100px;
+
+                @include to(l){
+                    margin-top: -80px;
+                }
+                @include to(md){
+                    margin-top: -60px;
+                }
+                @include to(m){
+                    margin-top: 0;
+                }
+                
+                img{
+                    width: 100%;
+                }
+            }
+            .copy{
+                background-color: $blue2;
+                border-radius: 20px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 750px;
+                margin: 0 auto;
+                margin-top: -35px;
+                position: relative;
+                z-index: 10;
+
+                @include to(l){
+                    margin-top: -30px;
+                }
+                @include to(md){
+                    margin-top: -20px;
+                }
+                @include to(600px){
+                    flex-direction: column;
+                    margin-top: -5px;
+                }
+                @include to(380px){
+                    padding: 15px 10px;
+                }
+
+                .text{
+                    font-family: $font-title;
+                    color: $blanco;
+                    width: calc(100% - 150px);
+                    text-align: center;
+
+                    @include to(600px){
+                        width: 100%;
+                    }
+
+                    h3{
+                        font-size: 45px;
+                        font-weight: 900;
+                        text-shadow: 3px 3px 0 rgba($negro,.15);
+
+                        @include to(md){
+                            font-size: 35px;
+                        }
+                        @include to(650px){
+                            font-size: 30px;
+                        }
+                        @include to(m){
+                            font-size: 24px;
+                        }
+                        @include to(380px){
+                            font-size: 22px;
+                        }
+
+                        span{
+                            color: $yellow;
+                        }
+                    }
+                    p{
+                        text-shadow: 2px 2px 0 rgba($negro,.15);
+                        font-size: 20px;
+                        font-weight: 900;
+                        line-height: 1.2;
+                        max-width: 400px;
+                        margin: 0 auto;
+                        padding-top: 5px;
+
+                        @include to(md){
+                            font-size: 18px;
+                        }
+                        @include to(650px){
+                            font-size: 16px;
+                            max-width: 350px;
+                        }
+                        @include to(m){
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .logo{
+                    text-align: center;
+                    width: 150px;
+
+                    @include to(600px){
+                        margin-top: 20px;
+                    }
+
+                    img{
+                        width: 80px;
+                        display: inline-block;
+
+                        @include to(md){
+                            width: 60px;
+                        }
+                        @include to(m){
+                            width: 50px;
+                        }
+                    }
+                    h1{
+                        color: $blanco;
+                        font-size: 20px;
+                        font-family: $font-title;
+                        font-weight: 900;
+
+                        @include to(md){
+                            font-size: 18px;
+                        }
+                        @include to(m){
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .counter{
+                background-color: $orange;
+                padding: 5px 10px 10px 10px;
+                border-radius: 15px;
+                max-width: 180px;
+                margin: 15px auto 40px auto;
+                text-align: center;
+
+                @include to(m){
+                    margin-bottom: 30px;
+                }
+
+                img{
+                    display: inline-block;
+                }
+                p{
+                    color: $blanco;
+                    line-height: 1;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,354 @@
+.category{
+    .wrap-content{
+        background: linear-gradient(#121124, #2D2E75, #6F65A9);
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .main{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            .copy{
+                text-align: center;
+                padding-top: 30px;
+                position: relative;
+
+                &:before{
+                    content: "";
+                    background-image: url("../img/personajes/personaje3.svg");
+                    background-repeat: no-repeat;
+                    background-size: 120px;
+                    position: absolute;
+                    width: 120px;
+                    height: 120px;
+                    right: -90px;
+                    top: 70px;
+
+                    @include to(1100px){
+                        right: -20px;
+                        top: 70px;
+                        background-size: 100px;
+                        width: 100px;
+                        height: 100px;
+                    }
+                    @include to(l){
+                        right: 60px;
+                        top: 80px;
+                    }
+                    @include to(md){
+                        display: none;
+                    }
+                }
+
+                h2{
+                    font-size: 55px;
+                    color: $yellow;
+                    font-weight: 900;
+                    font-family: $font-title;
+                    text-shadow: 2px 2px 0 rgba($negro,.15);
+                    line-height: 1.1;
+
+                    @include to(1100px){
+                        font-size: 50px;
+                    }
+                    @include to(l){
+                        font-size: 40px;
+                    }
+                    @include to(md){
+                        font-size: 30px;
+                    }
+
+                    span{
+                        display: block;
+                        font-size: 30px;
+                        color: $blanco;
+                        text-shadow: none;
+                        padding: 5px 0 10px 0;
+
+                        @include to(md){
+                            font-size: 24px;
+                        }
+                    }
+                }
+                img{
+                    display: inline-block;
+                    max-width: 400px;
+
+                    @include to(l){
+                        max-width: 350px;
+                    }
+                    @include to(md){
+                        max-width: 260px;
+                    }
+                }
+            }
+            .buttons{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding-top: 70px;
+                max-width: 700px;
+                margin: 0 auto;
+
+                .btn{
+                    width: calc(50% - 110px);
+                    margin: 40px 55px;
+                    max-width: 250px;
+                    text-align: center;
+                    padding: 3px 20px;
+                    font-family: $font-title;
+                    font-weight: 900;
+                    color: $blanco;
+                    position: relative;
+                    border-radius: 15px;
+                    font-size: 26px;
+                    box-shadow: 0 3px 0 rgba($negro,.2);
+                    transition: all .3s;
+
+                    @include to(md){
+                        width: calc(50% - 80px);
+                        margin: 50px 40px;
+                    }
+                    @include to(650px){
+                        width: calc(50% - 60px);
+                        margin: 30px;
+                    }
+                    @include to(600px){
+                        width: calc(50% - 40px);
+                        margin: 30px 20px;
+                        font-size: 22px;
+                        border-radius: 10px;
+                    }
+                    @include to(550px){
+                        font-size: 20px;
+                    }
+                    @include to(m){
+                        padding: 10px;
+                        margin: 10px 5px 40px 5px;
+                        width: calc(50% - 10px);
+                    }
+                    @include to(390px){
+                        font-size: 18px;
+                        padding: 8px 10px;
+                    }
+                    @include to(360px){
+                        font-size: 17px;
+                        margin: 10px 5px 45px 5px;
+                    }
+                    @include to(345px){
+                        font-size: 16px;
+                    }
+
+                    &:before{
+                        content: "";
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        background-size: 80px;
+                        width: 80px;
+
+                        @include to(650px){
+                            background-size: 55px;
+                            width: 55px;
+                        }
+                        @include to(m){
+                            background-size: 40px;
+                            width: 40px;
+                        }
+                    }
+                    
+                    &.ciencia{
+                        background-color: #049F46;
+
+                        &:before{
+                            background-image: url("../img/personajes/personaje4.svg");
+                            height: 135px;
+                            left: -32px;
+                            bottom: -15px;
+
+                            @include to(650px){
+                                height: 95px;
+                                left: 0;
+                                bottom: 0;
+                            }
+                            @include to(m){
+                                height: 70px;
+                                bottom: 32px;
+                                left: 5px;
+                            }
+                            @include to(390px){
+                                bottom: 30px;
+                            }
+                        }
+                        &:hover{
+                            background-color: darken(#049F46, 10%);;
+                        }
+                    }
+                    &.arte{
+                        background-color: #9B1116;
+
+                        &:before{
+                            background-image: url("../img/personajes/personaje5.svg");
+                            height: 170px;
+                            left: -50px;
+                            bottom: -35px;
+
+                            @include to(650px){
+                                height: 120px;
+                                left: -5px;
+                                bottom: 0;
+                            }
+                            @include to(m){
+                                height: 95px;
+                                left: auto;
+                                right: 10px;
+                                bottom: 25px;
+                            }
+                            @include to(390px){
+                                bottom: 20px;
+                            }
+                        }
+                        &:hover{
+                            background-color: darken(#9B1116, 10%);;
+                        }
+                    }
+                    &.deportes{
+                        background-color: #C76E0E;
+
+                        &:before{
+                            background-image: url("../img/personajes/personaje6.svg");
+                            height: 110px;
+                            right: -30px;
+                            bottom: -25px;
+
+                            @include to(650px){
+                                height: 80px;
+                                right: 0;
+                                bottom: 0;
+                            }
+                            @include to(m){
+                                height: 55px;
+                                right: auto;
+                                left: 2px;
+                                bottom: 38px;
+                            }
+                            @include to(390px){
+                                bottom: 30px;
+                            }
+                        }
+                        &:hover{
+                            background-color: darken(#C76E0E, 10%);;
+                        }
+                    }
+                    &.geografia{
+                        background-color: #0058AA;
+
+                        &:before{
+                            background-image: url("../img/personajes/personaje7.svg");
+                            height: 110px;
+                            right: -40px;
+                            bottom: -45px;
+
+                            @include to(650px){
+                                height: 65px;
+                                right: -10px;
+                                bottom: 0;
+                            }
+                            @include to(m){
+                                height: 45px;
+                                right: 5px;
+                                bottom: 40px;
+                            }
+                            @include to(390px){
+                                bottom: 30px;
+                            }
+                        }
+                        &:hover{
+                            background-color: darken(#0058AA, 10%);;
+                        }
+                    }
+                    &.historia{
+                        background-color: #DDB600;
+
+                        &:before{
+                            background-image: url("../img/personajes/personaje8.svg");
+                            height: 120px;
+                            left: -40px;
+                            bottom: -30px;
+
+                            @include to(650px){
+                                height: 82px;
+                                left: 0;
+                                bottom: 0;
+                            }
+                            @include to(m){
+                                height: 60px;
+                                left: 5px;
+                                bottom: 35px;
+                            }
+                            @include to(390px){
+                                bottom: 28px;
+                            }
+                        }
+                        &:hover{
+                            background-color: darken(#DDB600, 10%);;
+                        }
+                    }
+                    &.entretenimiento{
+                        background-color: #AD0062;
+
+                        &:before{
+                            background-image: url("../img/personajes/personaje9.svg");
+                            height: 110px;
+                            left: -55px;
+                            bottom: -30px;
+
+                            @include to(650px){
+                                height: 78px;
+                                left: -30px;
+                                bottom: 0;
+                            }
+                            @include to(m){
+                                height: 60px;
+                                left: auto;
+                                right: 5px;
+                                bottom: 32px;
+                            }
+                            @include to(390px){
+                                bottom: 28px;
+                            }
+                        }
+                        &:hover{
+                            background-color: darken(#AD0062, 10%);;
+                        }
+                    }
+                }
+            }
+            .text-extra{
+                color: $blue;
+                background-color: $blanco;
+                border-radius: 15px;
+                padding: 10px 30px;
+                font-weight: 500;
+                line-height: 1.2;
+                text-align: center;
+                max-width: 1000px;
+                margin: 20px auto;
+                font-size: 17px;
+
+                @include to(m){
+                    padding: 10px 15px;
+                    margin-top: 0;
+                    font-size: 16px;
+                }
+                @include to(350px){
+                    br{
+                        display: none; 
+                    }
+                }
+            }
+        }
+    }
+}

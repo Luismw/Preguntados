@@ -1,0 +1,41 @@
+$cssCore: false;
+$cssHelpers: true;
+
+// Variables para los colores
+
+// Colores generales
+$negro:      	#000000;
+$negro2:        #333333;
+$blanco:     	#ffffff;
+$text:       	#464750;
+$plomo : 		#F4F4F4; 
+
+// Colores de la paleta 
+$blue: #1675CE;
+$blue2: #00B4FF;
+$red:  #F32732;
+$yellow:  #F8DD41; 
+$green:  #20C868; 
+$orange:  #FF9400;
+
+$font-text: "BrandonText";
+$font-title: "Mikado"; 
+
+// Añadir librerias base para el funcionamiento y diseño del sitio web
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/hamburgers/hamburgers';
+@import 'base/bootstrap-select';
+
+// Importando Framework
+@import 'edgrid/ed-grid';
+
+// Archivos dev
+@import 'dev/globals';
+@import 'dev/header';
+@import 'dev/home';
+@import 'dev/register';
+@import 'dev/category';
+@import 'dev/question';
+@import 'dev/donation';
+@import 'dev/footer';

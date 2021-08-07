@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "BrandonText";
+	src: url("../fonts/BrandonText-Regular.otf");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BrandonText";
+	src: url("../fonts/BrandonText-Medium.otf");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BrandonText";
+	src: url("../fonts/BrandonText-Bold.otf");
+	font-weight: 700;
+	font-style: normal;
+}
+/**/
+@font-face {
+	font-family: "Mikado";
+	src: url("../fonts/MikadoRegular.otf");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Mikado";
+	src: url("../fonts/MikadoBold.otf");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Mikado";
+	src: url("../fonts/MikadoBlack.otf");
+	font-weight: 900;
+	font-style: normal;
+}
+
+/**/
+$flaticon: "flaticon";
+
+@font-face {
+    font-family: $flaticon;
+    src: url("../fonts/flaticon.ttf?8971612f0d4cf17c0ca0e677d97147e1") format("truetype"),
+		url("../fonts/flaticon.woff?8971612f0d4cf17c0ca0e677d97147e1") format("woff"),
+		url("../fonts/flaticon.woff2?8971612f0d4cf17c0ca0e677d97147e1") format("woff2"),
+		url("../fonts/flaticon.eot?8971612f0d4cf17c0ca0e677d97147e1#iefix") format("embedded-opentype"),
+		url("../fonts/flaticon.svg?8971612f0d4cf17c0ca0e677d97147e1#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "instagram": "\f101",
+    "logo-de-facebook": "\f102",
+);
+
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}
+.flaticon-logo-de-facebook:before {
+    content: map-get($flaticon-map, "logo-de-facebook");
+}
