@@ -69,6 +69,10 @@
                 max-width: 520px;
                 margin: 20px auto 0 auto;
 
+                @include to(m){
+                    flex-direction: column;
+                }
+
                 .image{
                     width: 50%;
 
@@ -76,7 +80,9 @@
                         margin-right: 10px;
                     }
                     @include to(m){
-                        display: none;
+                        margin: 0 0 20px 0;
+                        width: 100%;
+                        max-width: 250px;
                     }
 
                     img{
